@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище nikitaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="StatusUser">
+    <Key>
+      <PropertyRef Name="IdStatus" />
+    </Key>
+    <Property Name="IdStatus" Type="int" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginUser" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PasswordUser" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="int" />
+    <Property Name="DateRegistration" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Users_StatusUser1">
+    <End Role="StatusUser" Type="Self.StatusUser" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusUser">
+        <PropertyRef Name="IdStatus" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище nikitaModelContainer">
+    <EntitySet Name="StatusUser" EntityType="Self.StatusUser" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="db_owner" store:Type="Tables" />
+    <AssociationSet Name="FK_Users_StatusUser1" Association="Self.FK_Users_StatusUser1">
+      <End Role="StatusUser" EntitySet="StatusUser" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
