@@ -36,6 +36,10 @@ namespace WindowAppWPF.Pages
             {
                 this.NavigationService.Navigate(new PageForUser(usr));
             }
+            else
+            {
+                this.NavigationService.Navigate(new PageForModer(db, usr));
+            }
         }
 
         private void GoToRegButton_Click(object sender, RoutedEventArgs e)

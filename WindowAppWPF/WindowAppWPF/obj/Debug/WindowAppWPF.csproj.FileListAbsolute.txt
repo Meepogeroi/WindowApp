@@ -25,3 +25,5 @@ C:\Users\User\Desktop\WindowApp\WindowAppWPF\WindowAppWPF\obj\Debug\WindowAppWPF
 C:\Users\User\Desktop\WindowApp\WindowAppWPF\WindowAppWPF\obj\Debug\WindowAppWPF.pdb
 C:\Users\User\Desktop\WindowApp\WindowAppWPF\WindowAppWPF\obj\Debug\Pages\PageForUser.g.cs
 C:\Users\User\Desktop\WindowApp\WindowAppWPF\WindowAppWPF\obj\Debug\Pages\PageForUser.baml
+C:\Users\User\Desktop\WindowApp\WindowAppWPF\WindowAppWPF\obj\Debug\Pages\PageForModer.g.cs
+C:\Users\User\Desktop\WindowApp\WindowAppWPF\WindowAppWPF\obj\Debug\Pages\PageForModer.baml
